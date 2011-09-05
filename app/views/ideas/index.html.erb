@@ -1,0 +1,30 @@
+<h1>Все идеи пользователей</h1>
+
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Содержание</th>
+    <th>Автор</th>
+    <th>Рейтинг</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ideas.each do |idea| %>
+  <tr>
+    <td><%= idea.name %></td>
+    <td><%= idea.sod %></td>
+    <td><%= idea.user.username %></td>
+    <td><%= idea.raiting %></td>
+    <td><%= link_to 'Show', idea %></td>
+
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Idea', new_idea_path %>
+
